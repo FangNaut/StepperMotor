@@ -1,6 +1,3 @@
----------------------------------------------------------------------------------------------
--- Note : Find the way to reset j = 0 after finish rotate OR update i
-----------------------------------------------------------------------------------------------
 
 Library ieee;
 Use ieee.std_logic_1164.all;
@@ -10,16 +7,16 @@ Use ieee.numeric_std.all;
 entity controller is
 port (
 	-- Input signal		
-	clk	:	in std_logic;	-- System clock (50MHz)
-	rst   :  in std_logic;
+	clk		: in std_logic;	-- System clock (50MHz)
+	rst  		: in std_logic;
 	sw17, sw16 	: in std_logic;
 	
 	-- UART inteface
-	uart_data : in std_logic_vector(7 downto 0);		-- Connect to RX_DATA
+	uart_data 	: in std_logic_vector(7 downto 0);		-- Connect to RX_DATA
 	
 	-- Output signal
 	ledr17, ledr16	: out std_logic;
-	gpio_output : out std_logic_vector(3 downto 0);	-- Output for GPIO
+	gpio_output 	: out std_logic_vector(3 downto 0);	-- Output for GPIO
 	ledr_output	: out std_logic_vector(7 downto 0)	-- Output for red LEDs
 	);
 end controller;
